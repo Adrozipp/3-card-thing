@@ -1,0 +1,118 @@
+@import url("https://fonts.googleapis.com/css2?family=Big+Shoulders+Display&family=Lexend+Deca&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  max-width: 1440px;
+}
+
+.car-box {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: repeat(6, 100px);
+}
+
+.sedan-box,
+.suv-box,
+.luxury-box {
+  padding: 30px;
+  grid-row: 2/6;
+  padding-top: 40px;
+}
+
+.sedan-box {
+  background-color: hsl(31, 77%, 52%);
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  grid-column: 2;
+  width: 300px;
+  height: 450px;
+}
+
+.suv-box {
+  background-color: hsl(184, 100%, 22%);
+  grid-column: 3;
+  width: 300px;
+  height: 450px;
+}
+
+.luxury-box {
+  background-color: hsl(179, 100%, 13%);
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  grid-column: 4;
+  width: 300px;
+  height: 450px;
+}
+
+h1 {
+  font-family: "Big Shoulders Display", sans-serif;
+  color: hsl(0, 0%, 95%);
+  font-weight: 700;
+  letter-spacing: -0px;
+  padding: 5% 0% 5% 5%;
+  font-size: 35px;
+}
+
+.sedan-box img,
+.suv-box img,
+.luxury-box img {
+  width: 50px;
+  padding-bottom: 15px;
+}
+/* */
+p {
+  font-family: "Lexend Deca", sans-serif;
+  color: hsla(0, 0%, 100%, 0.75);
+  font-size: 15px;
+  padding: 5% 5% 30% 5%;
+  line-height: 175%;
+}
+
+button {
+  width: 140px;
+  height: 40px;
+  border-radius: 100px;
+  background: hsla(0, 0%, 100%, 0.75);
+  border: none;
+  margin-left: 5%;
+  font-family: "Lexend Deca", sans-serif;
+  transition: 0.5s ease-in-out;
+}
+button:hover {
+  width: 140px;
+  height: 40px;
+  border-radius: 100px;
+  background: none;
+  border: 2px solid hsla(0, 0%, 100%, 0.75);
+  margin-left: 5%;
+  color: hsla(0, 0%, 100%, 0.75);
+  font-family: "Lexend Deca", sans-serif;
+  cursor: pointer;
+}
+.sedan-btn {
+  color: hsl(31, 77%, 52%);
+}
+.suv-btn {
+  color: hsl(184, 100%, 22%);
+}
+.luxury-btn {
+  color: hsl(179, 100%, 13%);
+}
+
+@media (max-width: 375px) {
+  .car-box {
+    display: flex;
+    flex-direction: column;
+    padding: 60px 37.5px 0px 37.5px;
+  }
+  .sedan-box,
+  .suv-box,
+  .luxury-box {
+    border-radius: 5px;
+  }
+}
+
+.suv-box {
+}
